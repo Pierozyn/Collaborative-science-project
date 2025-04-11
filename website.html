@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Collaborative Science Project</title>
+  <link rel="stylesheet" href="website.css">
+</head>
+<body>
+
+  <h1>Findings from our experiment + processed data</h1>
+
+  <div class="ts-container">
+    <!-- Black Tea -->
+    <div class="t-item">
+      <div class="tooltip-container" onclick="toggleTea(0)">
+        <img src="black tea.jpg" alt="Black Tea" class="t-image">
+        <span class="tooltip">Click to reveal</span>
+      </div>
+      <p class="tea-label">Black tea</p>
+      <div class="tea-info" id="tea-info-0">
+        <p>Black tea results!</p>
+        <img src="black results.jpg" alt="Black Tea Result">
+      </div>
+    </div>
+
+    <!-- Green Tea -->
+    <div class="t-item">
+      <div class="tooltip-container" onclick="toggleTea(1)">
+        <img src="green tea.jpg" alt="Green Tea" class="t-image">
+        <span class="tooltip">Click to reveal</span>
+      </div>
+      <p class="tea-label">Green tea</p>
+      <div class="tea-info" id="tea-info-1">
+        <p>Green tea results!</p>
+        <img src="green results.jpg" alt="Green Tea Result">
+      </div>
+    </div>
+
+    <!-- Herbal Tea -->
+    <div class="t-item">
+      <div class="tooltip-container" onclick="toggleTea(2)">
+        <img src="fruit tea.jpg" alt="Herbal Tea" class="t-image">
+        <span class="tooltip">Click to reveal</span>
+      </div>
+      <p class="tea-label">Herbal tea</p>
+      <div class="tea-info" id="tea-info-2">
+        <p>Herbal tea results!</p>
+        <img src="fruite results.jpg" alt="Herbal Tea Result">
+      </div>
+    </div>
+  </div>
+
+  <script src="website.js"></script>
+</body>
+</html>

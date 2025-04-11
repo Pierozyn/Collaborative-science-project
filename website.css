@@ -1,0 +1,122 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(to right, #e0f7fa, #e8f5e9);
+  color: #333;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: #00695c;
+}
+
+.ts-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/* Tea card */
+.t-item {
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+  width: 240px;
+  position: relative;
+  overflow: visible;
+}
+
+.t-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Tooltip wrapper */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Tooltip styling with smooth transition */
+.tooltip {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(-50%) translateY(10px); /* starts below */
+  background-color: #00796b;
+  color: #fff;
+  text-align: center;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.9em;
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Tooltip active on hover */
+.tooltip-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0); /* smoothly rise up */
+}
+
+.t-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tea-label {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #00796b;
+  margin-top: 12px;
+}
+
+/* Tea info box (expands on click) */
+.tea-info {
+  position: absolute;
+  top: 105%;
+  left: 0;
+  width: 100%;
+  background: #d0f0ec;
+  border-radius: 14px;
+  padding: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: all 0.4s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.tea-info.show {
+  opacity: 1;
+  transform: scaleY(1);
+  pointer-events: auto;
+}
+
+.tea-info img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.tea-info p {
+  font-size: 1em;
+  color: #37474f;
+  margin: 0;
+}
